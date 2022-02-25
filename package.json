@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn  src/server.ts ",
-    "start": "dist/server.js "
+    "start": "node dist/server.js ",
+    "build": "tsc"
   },
   "dependencies": {
     "express": "^4.17.3",
