@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.updateCollaboratorController = void 0;
+const CollaboratorRepository_1 = require("../../repositories/implementation/CollaboratorRepository");
+const UpdateCollaboratorController_1 = require("./UpdateCollaboratorController");
+const UpdateCollaboratorUseCase_1 = require("./UpdateCollaboratorUseCase");
+const collaboratorRepository = CollaboratorRepository_1.CollaboratorRepository.getInstance();
+const updateCollaboratorUseCase = new UpdateCollaboratorUseCase_1.UpdateCollaboratorUseCase(collaboratorRepository);
+const updateCollaboratorController = new UpdateCollaboratorController_1.UpdateCollaboratorController(updateCollaboratorUseCase);
+exports.updateCollaboratorController = updateCollaboratorController;
